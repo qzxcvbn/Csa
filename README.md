@@ -1,17 +1,6 @@
-# Csa – Sovereign Access Constant
-
-Open standard for passwordless, zero-knowledge authentication.  
-No stored secrets. No honey-pots. Ethical by design.
-
-Full specification below ↓
-
-
-
-
-
-
-
 THE SOVEREIGN ACCESS CONSTANT (C_sa)
+
+Copyright © 2026 Safe Haven Foundation. All Rights Reserved.
 
 A Universal Open Standard for Passwordless, Zero-Knowledge Internet & Device Authentication
 
@@ -123,7 +112,7 @@ admin@safe-haven-foundation.org
 
 Website: safe-haven-foundation.org (coming soon)
 
-GitHub: https://github.com/qzxcvbn/Csa/
+GitHub: https://github.com/qzxcvbn/Csa
 
 We can build a sovereign internet — one resonance at a time.
 
