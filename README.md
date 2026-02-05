@@ -1,3 +1,16 @@
+# Csa – Sovereign Access Constant
+
+Open standard for passwordless, zero-knowledge authentication.  
+No stored secrets. No honey-pots. Ethical by design.
+
+Full specification below ↓
+
+
+
+
+
+
+
 THE SOVEREIGN ACCESS CONSTANT (C_sa)
 
 A Universal Open Standard for Passwordless, Zero-Knowledge Internet & Device Authentication
