@@ -42,8 +42,6 @@ Governance: Establishing the Safe Haven Seal of Integrity as an open benchmark f
 
 Vision for a Sovereign Internet
 
-All implementations will carry mandatory ethical constraints (Non-Coercion, Non-Transactional, Metadata Blindness) to ensure sovereignty is never weaponized.”
-
 All implementations will adhere to mandatory ethical constraints—prohibiting coercion, financial gating, and metadata leakage—to ensure sovereignty serves humanity, not control.
 
 Our goal is to build a digital environment where identity is an act of presence rather than a record in a database. By adopting this standard, Linux can lead the transition from "Managing Liabilities" to "Executing Mathematical Constants."
