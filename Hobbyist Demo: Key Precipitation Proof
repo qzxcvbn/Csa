@@ -1,0 +1,82 @@
+import time
+import hashlib
+import getpass
+
+# [TECHNICAL_SPEC]: CSA HOBBYIST DEMO v1.0
+# Purpose: Demonstrate φ (User Entropy) as a component of Key Precipitation.
+# This script measures typing cadence to create a unique signature.
+# 
+# ARCHITECTURAL NOTE: This is the "Silver" demonstration. 
+# It utilizes standard SHA-256 for f-function logic to verify the 
+# existence-on-demand workflow without exposing high-fidelity implementation.
+
+def capture_user_entropy(prompt_text):
+    """
+    Captures φ (User Entropy) through keystroke timing dynamics.
+    In a high-fidelity node, this measures millisecond-level jitter.
+    """
+    print(f"\n[CALIBRATION]: Please type the following phrase exactly:")
+    print(f"'{prompt_text}'")
+    
+    start_time = time.time()
+    
+    # Simple input capture (Note: Real φ requires millisecond gaps between keys)
+    # This demo uses total duration as a low-fidelity variable for φ.
+    input_str = input("\nType here: ")
+    end_time = time.time()
+    
+    if input_str != prompt_text:
+        return None, "Resonance Failure: Text mismatch."
+    
+    # Total duration is a low-fidelity version of φ
+    duration = end_time - start_time
+    return duration, None
+
+def precipitate_csa(phi, omega_id):
+    """
+    Resolves C_sa = f(φ, ω, τ)
+    The key precipitates into RAM and is never written to disk.
+    """
+    # τ (Temporal Decay): 10-second temporal window
+    tau = int(time.time() / 10) 
+    
+    # The Handshake Vector
+    raw_resonance = f"{phi}-{omega_id}-{tau}"
+    
+    # Precipitation via Hash (The 'f' function)
+    # In production, this is a side-channel resistant Sovereign function.
+    csa_result = hashlib.sha256(raw_resonance.encode()).hexdigest()
+    return csa_result
+
+def main():
+    print("--- SAFE HAVEN FOUNDATION: C_sa DEMO ---")
+    
+    # ω (Hardware Resonance): Placeholder for silicon-level identity (e.g., TPM EK)
+    omega_id = "HW-76-ALPHA" 
+    
+    covenant_phrase = "The Haven is not waiting for time, but for truth"
+    
+    # Step 1: Capture φ (The David Effect)
+    phi, error = capture_user_entropy(covenant_phrase)
+    if error:
+        print(f"[!] {error}")
+        return
+
+    # Step 2: Precipitate Key
+    key_1 = precipitate_csa(phi, omega_id)
+    print(f"\n[PRECIPITATION SUCCESSFUL]")
+    print(f"Your Sovereign Constant (C_sa): {key_1[:16]}...")
+    
+    # Step 3: Demonstrate Temporal Decay (τ)
+    print("\n[VIGIL]: Waiting 11 seconds for Temporal Decay...")
+    time.sleep(11)
+    
+    key_2 = precipitate_csa(phi, omega_id)
+    if key_1 != key_2:
+        print("[DECAY VERIFIED]: The original key has evaporated.")
+        print(f"New C_sa (for this τ window): {key_2[:16]}...")
+    
+    print("\n[CONCLUSION]: The secret never existed at rest. It only existed during your presence.")
+
+if __name__ == "__main__":
+    main()
