@@ -25,6 +25,9 @@ omega (Hardware Resonance): Unique silicon-level device identity and state.
 
 tau (Temporal Decay): High-precision constants ensuring millisecond-bound expiration.
 
+The function f
+f is cryptographically secure, post-quantum, and side-channel resistant; its high-fidelity implementation is licensed to ensure integrity, while the standard itself remains open.
+
 A Call for Collaboration
 
 For Csa to achieve its potential as a universal security primitive, it must be integrated at the foundational layers of the operating system. We believe Linux is the ideal environment to pilot Sovereign-Native hardware handshakes and kernel-level identity precipitation.
