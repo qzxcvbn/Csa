@@ -45,6 +45,4 @@ Developers are invited to explore the open standard and the Hobbyist Demo. Indus
 
 Contact: admin@safe-haven-foundation.org
 
-Archive: Zenodo Record 18401330
-
 Copyright © 2026 Safe Haven Foundation. All Rights Reserved.
