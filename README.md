@@ -1,103 +1,50 @@
-THE SOVEREIGN ACCESS CONSTANT ($C_{sa}$)
+The Sovereign Access Constant (Csa) v1.0
 
-Copyright © 2026 Safe Haven Foundation. All Rights Reserved.
+Status: PATENT PENDING (UK Application No. GB2602979.3) Filing Date: 09 February 2026
 
-Status: PATENT PENDING (UK Application No. GB2602979.3)
-Filing Date: 09 February 2026
-Org: @safe-haven
+Release Authority: Safe Haven Foundation
 
-A Universal Open Standard for Passwordless, Zero-Knowledge Internet & Device Authentication
+Executive Summary: The End of the Stored Secret
 
-Version: 1.0 – February 5, 2026
+The Sovereign Access Constant (Csa) is a universal open standard designed to eliminate the "Storage Paradox"—the inherent vulnerability of storing static cryptographic secrets. By replacing passwords, master keys, and biometric templates with ephemeral keys that precipitate only during real-time resonance between user, device, and time, Csa provides the first mathematically immune authentication primitive for the Sovereign Internet.
 
-Classification: Open Reference Standard / Licensed High-Fidelity Implementation
+1. THE LEGAL SHIELD
 
-Mandate: Zero-Knowledge Access for a Sovereign Internet
+This technology and its underlying methods for Hardware-Native Identity Precipitation and Zero-Knowledge Authentication are protected under patent law (UK IPO GB2602979.3).
 
-EXECUTIVE SUMMARY
+Priority Date: 09 February 2026.
 
-The Sovereign Access Constant ($C_{sa}$) is an open standard that eliminates stored secrets (passwords, tokens, recovery keys) by replacing them with ephemeral keys that precipitate only during real-time resonance between user, device, and time. This removes the honey-pot vulnerability of credential databases and enables true digital sovereignty — no breachable storage, no persistent tracking, and no coercion vectors. The standard is mathematically defined, ethically constrained, and ready for software-first adoption (browser/app) with a future path to kernel/boot integration on Linux.
+Scope: Covers the entire chain of presence, from the first millisecond of silicon ignition to multi-substrate web-native handshakes.
 
-1. THE PROBLEM: THE HONEY-POT VULNERABILITY
+Integrity Mandate: Any implementation must adhere to the Safe Haven Ethical License (SHEL) v1.0.
 
-Modern authentication relies on static secret storage — passwords, tokens, or keys held in databases, TPMs, or recovery systems. A single breach exposes millions (e.g., credential-stuffing attacks remain the #1 vector in 2025–2026). Secure Boot and device encryption inherit the same flaw: static keys create permanent compromise risk if leaked or subpoenaed. This centralized architecture is fundamentally insecure.
-
-2. THE SOLUTION: KEY PRECIPITATION
-
-$C_{sa}$ replaces stored secrets with ephemeral mathematics. The access key does not exist in any database, TPM, or persistent store — it precipitates into existence only during a real-time, high-integrity resonance event and is immediately purged.
-
-3. THE FUNCTIONAL STANDARD
+2. THE FUNCTIONAL STANDARD
 
 Access is granted by resolving the Sovereign Access Constant:
 
-$C_{sa} = ∮ f(φ, ω, τ)$
 
-$φ$ (User Entropy) — Non-stored, volatile behavioral or biological signature (e.g., high-fidelity touch, pressure, or linguistic pattern).
+$$C_{sa} = \oint f(\phi, \omega, \tau)$$
 
-$ω$ (Hardware Resonance) — Unique silicon-level device identity (TPM/Secure Enclave EK or measured state).
+$\phi$ (User Entropy): Volatile behavioral/biological signatures (micro-tremors, linguistic cadence).
 
-$τ$ (Temporal Decay) — Ensures the key expires in milliseconds (prevents replay/harvesting).
+$\omega$ (Hardware Resonance): Unique, non-clonable silicon-level device identity.
 
-$f$ is a cryptographically secure, post-quantum, side-channel-resistant function (implementation details proprietary to licensed nodes). The result $C_{sa}$ is verified zero-knowledge — the server learns only mathematical correctness, nothing about $φ, ω,$ or $τ$.
+$\tau$ (Temporal Decay): High-precision expiration ensuring the key exists only in volatile RAM for <100ms.
 
-4. THE HANDSHAKE SEQUENCE
+3. CORE ADVANTAGES
 
-Challenge — Server sends nonce to user device.
+Zero Keys at Rest: There is no "Master Key" to steal and no database to harvest.
 
-Local Precipitation — Device computes $C_{sa}$ in volatile RAM.
+Quantum Immunity: Security is derived from information-theoretic truth rather than just computational hardness.
 
-Key Creation — Ephemeral access token forms.
+Existence-on-Demand: Your digital identity exists only when you are physically and behaviorally present.
 
-Verification — Server checks proof without seeing inputs.
+Implementation & Licensing
 
-Grant & Erasure — Access granted for session; key purged immediately.
+Developers are invited to explore the open standard and the Hobbyist Demo. Industrial-grade, high-fidelity implementations of the proprietary $f$-function and $r_{ij}$ resonance coefficients require a Sovereign Implementation License.
 
-5. MULTI-DEVICE & MULTI-USER SOVEREIGNTY
+Contact: admin@safe-haven-foundation.org
 
-Parallel Realities: Each user/device pair precipitates a unique key. Personal data sectors decrypt only for the matching resonance.
+Archive: Zenodo Record 18401330
 
-Shared Substrate: Read-only common partition (libraries, OS utilities) accessible to all authorized keys — efficiency without privacy leakage.
-
-Guest Substrate (Lockdown Mode): No match → read-only sandbox boot (no access to primary data).
-
-6. NON-APPLICABILITY MANDATE (STRICT FUNCTIONAL BARRIER)
-
-Non-Transactional: $C_{sa}$ is a gate-opening constant only. It is mathematically incapable of validating financial transactions, credit scores, or payment ledgers.
-
-Prohibition of Payment Integration: Implementations must not link access to digital wallets, balances, or transaction history.
-
-7. ETHICAL NON-COERCION CLAUSE
-
-Prohibition of Access-Based Coercion: $C_{sa}$ shall never gate essential human services (commerce, housing, food, health) based on non-security compliance.
-
-The "If/Then" Shield: Any use as “digital hostage-taking” (e.g., social credit gating) is explicitly unauthorized under this standard.
-
-8. ARCHITECTURE OF LIMITATION
-
-Stateless Authentication: Key resolves and terminates — no persistent bridge to activity.
-
-Metadata Blindness: Server receives only proof of correctness — no location, device details, or behavioral context.
-
-9. OS SECURITY MANDATE
-
-For maximum integrity, $C_{sa}$ should be embedded in the kernel or hardware-identity subsystem of major operating systems. We urge Linux distributions (Fedora, Ubuntu, Pop!_OS, NixOS), hardware partners (Framework, System76), and OS vendors to adopt this standard to eliminate legacy stored-secret vulnerabilities.
-
-10. LICENSE & DISCLAIMER
-
-Licensed under Apache 2.0 with additional binding conditions: Sections 6–8 (Non-Applicability Mandate, Ethical Non-Coercion Clause, Architecture of Limitation) are MANDATORY. Any implementation violating these is not authorized under this license.
-
-This is a reference specification (v1.0). Provided as-is, no warranty. Implementers assume all risk. High-fidelity Resonance Node implementations require licensing from the Safe Haven Foundation to ensure cryptographic integrity and ethical compliance.
-
-11. INVITATION TO THE WORLD
-
-We invite developers, distributions, and hardware partners to implement $C_{sa}$ as the future of secure access. Start with software prototypes (browser extensions, WASM libraries). For kernel/boot integration or high-fidelity node licensing, contact:
-
-Email: admin@safe-haven-foundation.org
-
-Website: safe-haven-foundation.org (coming soon)
-
-GitHub: https://github.com/qzxcvbn/Csa
-
-We can build a sovereign internet — one resonance at a time.
-
-[SYSTEM_STATUS]: SIGNAL_LOCKED / MANIFESTO_ARCHIVED / TRUTH-FIRST
+Copyright © 2026 Safe Haven Foundation. All Rights Reserved.
