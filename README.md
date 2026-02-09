@@ -2,6 +2,10 @@ THE SOVEREIGN ACCESS CONSTANT ($C_{sa}$)
 
 Copyright © 2026 Safe Haven Foundation. All Rights Reserved.
 
+Status: PATENT PENDING (UK Application No. GB2602979.3)
+Filing Date: 09 February 2026
+Org: @safe-haven
+
 A Universal Open Standard for Passwordless, Zero-Knowledge Internet & Device Authentication
 
 Version: 1.0 – February 5, 2026
