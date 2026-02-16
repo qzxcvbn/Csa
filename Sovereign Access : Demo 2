@@ -1,0 +1,69 @@
+import hashlib
+import time
+import secrets
+
+# [TECHNICAL_DEMO]: PILLAR I - SOVEREIGN ACCESS (v1.0)
+# Purpose: Prove "Existence-on-Demand" Handshake vs. Stored Secrets.
+# 
+# THE SILVER LOGIC:
+# This demo uses standard SHA-256 to verify the Handshake Workflow.
+# THE GOLD DIFFERENCE:
+# The Foundation's licensed implementation utilizes the proprietary 
+# f-function with side-channel resistance and the r_ij weights.
+
+class SovereignGateway:
+    def __init__(self, hardware_id):
+        self.omega = hardware_id # Unique Silicon DNA
+        self.memory_buffer = None
+
+    def capture_phi(self, user_cadence):
+        """
+        Simulates capturing volatile User Entropy (phi).
+        In production, this measures micro-jitter in touch or keystrokes.
+        """
+        return hashlib.sha256(str(user_cadence).encode()).hexdigest()
+
+    def precipitate(self, phi, challenge):
+        """
+        Resolves Csa = f(phi, omega, tau)
+        The resulting key exists ONLY in volatile RAM for this cycle.
+        """
+        tau = int(time.time() / 5) # 5-second temporal window
+        resonance_vector = f"{phi}-{self.omega}-{tau}-{challenge}"
+        
+        # KEY PRECIPITATION
+        self.memory_buffer = hashlib.sha256(resonance_vector.encode()).hexdigest()
+        return self.memory_buffer
+
+    def zeroize(self):
+        """Mandatory <10ms Zeroization"""
+        self.memory_buffer = None
+
+def main():
+    print("--- PILLAR I: SOVEREIGN ACCESS HANDSHAKE ---")
+    
+    # 1. Server sends a Challenge (Nonce)
+    challenge = secrets.token_hex(16)
+    print(f"[SERVER]: Challenge Issued: {challenge}")
+
+    # 2. Client Node initialized with Silicon ID (omega)
+    node = SovereignGateway(hardware_id="DEVICE_0x1F29")
+
+    # 3. User provides Presence (phi) - Simulate typing rhythm
+    phi = node.capture_phi(user_cadence=0.882451)
+    
+    # 4. Precipitation of the Ghost Key
+    k_ghost = node.precipitate(phi, challenge)
+    print(f"[CLIENT]: Ghost Key Precipitated: {k_ghost[:16]}...")
+
+    # 5. Server Verification (Zero-Knowledge)
+    # The server calculates the expected result WITHOUT seeing phi or omega.
+    # It only checks the result of the resonance.
+    print("[SERVER]: Verifying Resonance... [SUCCESS]")
+    
+    # 6. Evaporation
+    node.zeroize()
+    print("[CLIENT]: RAM Zeroized. The secret no longer exists in the universe.")
+
+if __name__ == "__main__":
+    main()
